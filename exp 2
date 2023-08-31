@@ -1,0 +1,65 @@
+factorial_recursive <- function(n) {
+  if (n <= 1) {
+    return(1)
+  } else {
+    return(n * factorial_recursive(n - 1))
+  }
+}
+
+n <- 5
+result <- factorial_recursive(n)
+cat("Factorial of", n, "is", result)
+
+
+sum_natural_numbers <- function(n) {
+  sum <- 0
+  i <- 1
+  while (i <= n) {
+    sum <- sum + i
+    i <- i + 1
+  }
+  return(sum)
+}
+
+n <- 4
+result <- sum_natural_numbers(n)
+cat("Sum of first", n, "natural numbers is", result)
+
+
+
+sum_of_squares <- function(n) {
+  sum <- 0
+  for (i in 1:n) {
+    sum <- sum + i^2
+  }
+  return(sum)
+}
+
+n <- 3
+result <- sum_of_squares(n)
+cat("Sum of squares of first", n, "numbers is", result)
+
+
+text <- "Hello, world!"
+words <- strsplit(text, " ")[[1]]
+reversed <- rev(words)
+reversed_text <- paste(reversed, collapse = " ")
+cat("Original text:", text, "\n")
+cat("Reversed text:", reversed_text)
+
+
+
+numbers <- c(12, 45, 23, 67, 89, 34, 56)
+
+min_val <- min(numbers)
+max_val <- max(numbers)
+mean_val <- mean(numbers)
+median_val <- median(numbers)
+variance_val <- var(numbers)
+
+cat("Numbers:", numbers, "\n")
+cat("Minimum:", min_val, "\n")
+cat("Maximum:", max_val, "\n")
+cat("Mean:", mean_val, "\n")
+cat("Median:", median_val, "\n")
+cat("Variance:", variance_val, "\n")
